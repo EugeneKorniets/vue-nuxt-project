@@ -1,0 +1,22 @@
+{
+  "name": "vue-nuxt-project",
+  "version": "1.0.0",
+  "description": "Training FullStack App",
+  "author": "EugeneKorniets",
+  "license": "ISC",
+  "main": "index.js",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "front-install": "npm install --prefix frontend",
+    "front-dev": "npm run dev --prefix frontend",
+    "front-build": "npm run build --prefix frontend",
+    "front-start": "npm run start --prefix frontend",
+    "back-install": "npm install --prefix backend",
+    "back-dev": "npm run server --prefix backend",
+    "back-start": "npm run server --prefix backend",
+    "deploy": "npm run front install && npm run front-build && npm run back-install && npm run back-start"
+  }
+}

@@ -1,0 +1,8 @@
+$elements: rgba(155, 155, 155, .5);
+
+// viewport widths
+$mob-tab-widths-only: (max-width: 1199px);
+$tablet-widths: (min-width: 700px);
+$desktop-widths: (min-width: 1025px);
+
+$retina: (min-resolution: 144dpi) and (min-resolution: 1.5dppx);

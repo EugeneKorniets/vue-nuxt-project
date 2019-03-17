@@ -1,0 +1,28 @@
+.DS_Store
+node_modules
+dist
+
+# Local config files
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend directory files
+frontend/.DS_Store
+frontend/node_modules
+frontend/dist
+
+# Backend directory files
+backend/.DS_Store
+backend/node_modules

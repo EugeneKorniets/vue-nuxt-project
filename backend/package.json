@@ -1,0 +1,34 @@
+{
+  "name": "vue-nuxt-backend",
+  "version": "1.0.0",
+  "description": "Node Express App",
+  "author": "Eugene Korniets <evgeniy.korniets@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "test": "npx mocha",
+    "start": "node app",
+    "server": "cross-env NODE_ENV=production nodemon index"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.7",
+    "morgan": "^1.9.1",
+    "os": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "cross-env": "^5.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  }
+}

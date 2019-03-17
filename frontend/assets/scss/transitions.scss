@@ -1,0 +1,18 @@
+// fade animation
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .15s;
+}
+
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
+
+// fade replace animation
+.fade-replace-enter-active, .fade-replace-leave-active {
+	transition: opacity .15s;
+}
+
+.fade-replace-enter, .fade-replace-leave-to {
+	position: absolute;
+	opacity: 0;
+}

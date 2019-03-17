@@ -1,0 +1,14 @@
+.logo {
+	width: 120px;
+	text-align: center;
+
+	&__link {
+		color: var(--text-color-2);
+		text-decoration: none;
+		transition: .1s;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
