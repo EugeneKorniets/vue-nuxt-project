@@ -17,19 +17,19 @@
 </template>
 
 <script>
-export default {
-  name: "AppHeaderBar",
+  export default {
+    name: "AppHeaderBar",
 
-  props: {
-    linkList: {
-      type: Array
-    }
-  },
+    props: {
+      linkList: {
+        type: Array
+      }
+    },
 
-  methods: {
-    headerBarClickLink (id) {
-      this.$emit('header-click-link', id)
+    methods: {
+      headerBarClickLink (id) {
+        this.$emit('header-click-link', id)
+      }
     }
   }
-}
 </script>

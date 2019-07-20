@@ -1,46 +1,46 @@
 <template>
-	<div id="app" class="app-container">
-		<header class="page-header">
-			<no-ssr>
-				<AppHeaderBar
-					:linkList="HEADER_BAR_LINK_LIST"
-					@header-click-link="headerBarClickLinkHandler"
-				></AppHeaderBar>
-			</no-ssr>
-			<AppMenu></AppMenu>
-		</header>
+  <div id="app" class="app-container">
+    <header class="page-header">
+      <no-ssr>
+        <AppHeaderBar
+          :linkList="HEADER_BAR_LINK_LIST"
+          @header-click-link="headerBarClickLinkHandler"
+        ></AppHeaderBar>
+      </no-ssr>
+      <AppMenu></AppMenu>
+    </header>
 
-		<main class="page-content">
-			<div class="page-content__container">
-				<h1 class="page-content__heading--1">Каталог</h1>
-				<h2 class="page-content__heading--2">Девочки</h2>
-			</div>
-		</main>
+    <main class="page-content">
+      <div class="page-content__container">
+        <h1 class="page-content__heading--1">Каталог</h1>
+        <h2 class="page-content__heading--2">Девочки</h2>
+      </div>
+    </main>
 
-		<footer class="page-footer">
-			<div class="page-footer__container">
-				<h1 class="page-content__heading--1">Footer</h1>
-			</div>
-		</footer>
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <h1 class="page-content__heading--1">Footer</h1>
+      </div>
+    </footer>
 
-		<no-ssr>
-			<AppPopup
-				:isActive="isActivePopup"
-				:heading="'Выберите город'"
-				:loadingContent="cityListLoading"
-				@close-popup="togglePopup"
-			>
-				<ul
-					class="list"
-					v-if="CITY_LIST.length"
-				>
-					<li
-						v-for="city in CITY_LIST"
-					>{{ city.cityName }}</li>
-				</ul>
-			</AppPopup>
-		</no-ssr>
-	</div>
+    <no-ssr>
+      <AppPopup
+        :isActive="isActivePopup"
+        :heading="'Выберите город'"
+        :loadingContent="cityListLoading"
+        @close-popup="togglePopup"
+      >
+        <ul
+          class="list"
+          v-if="CITY_LIST.length"
+        >
+          <li
+            v-for="city in CITY_LIST"
+          >{{ city.cityName }}</li>
+        </ul>
+      </AppPopup>
+    </no-ssr>
+  </div>
 </template>
 
 <script>

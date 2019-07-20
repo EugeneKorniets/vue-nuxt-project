@@ -1,34 +1,34 @@
 <template>
-	<div class="logo">
-		<router-link
-			class="logo__link"
-			:to="path"
-			:title="title"
-		>
-			{{ text }}
-		</router-link>
-	</div>
+  <div class="logo">
+    <router-link
+      class="logo__link"
+      :to="path"
+      :title="title"
+    >
+      {{ text }}
+    </router-link>
+  </div>
 </template>
 
 <script>
-export default {
-	name: "Logo",
+  export default {
+    name: "Logo",
 
-	props: {
-	  text: {
-	    type: String,
-			default: 'LOGO'
-		},
+    props: {
+      text: {
+        type: String,
+        default: 'LOGO'
+      },
 
-		path: {
-	    type: String,
-			default: '/'
-		},
+      path: {
+        type: String,
+        default: '/'
+      },
 
-		title: {
-	    type: String,
-			default: 'Главная'
-		}
-	}
+      title: {
+        type: String,
+        default: 'Главная'
+      }
+    }
 }
 </script>

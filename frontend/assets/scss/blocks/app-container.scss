@@ -1,21 +1,21 @@
 .app-container {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	min-width: 700px;
-	background: var(--bg-body);
-	transition: background .3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 700px;
+  background: var(--bg-body);
+  transition: background .3s;
 }
 
 @media #{$tablet-widths} {
-	.app-container {
+  .app-container {
 
-	}
+  }
 }
 
 @media #{$desktop-widths} {
-	.app-container {
+  .app-container {
 
-	}
+  }
 }

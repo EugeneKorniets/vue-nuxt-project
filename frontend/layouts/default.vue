@@ -6,21 +6,21 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+  import { mapState } from 'vuex'
 
-import ThemeToggle from '@/components/ThemeToggle'
+  import ThemeToggle from '@/components/ThemeToggle'
 
-export default {
-  components: {
-    ThemeToggle
-  },
+  export default {
+    components: {
+      ThemeToggle
+    },
 
-  computed: {
-    ...mapState('theme', {
-      THEME: 'theme'
-    })
+    computed: {
+      ...mapState('theme', {
+        THEME: 'theme'
+      })
+    }
   }
-}
 </script>
 
 <style>

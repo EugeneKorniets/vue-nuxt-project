@@ -1,28 +1,28 @@
 .page-footer {
-	margin-top: 30px;
+  margin-top: 30px;
 
-	&__container {
-		padding: 20px 0;
-	}
+  &__container {
+    padding: 20px 0;
+  }
 }
 
 @media #{$tablet-widths} {
-	.page-footer {
+  .page-footer {
 
-		&__container {
-			width: 98%;
-			margin: 0 auto;
-		}
-	}
+    &__container {
+      width: 98%;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media #{$desktop-widths} {
-	.page-footer {
+  .page-footer {
 
-		&__container {
-			width: 94%;
-			max-width: 1280px;
-			margin: 0 auto;
-		}
-	}
+    &__container {
+      width: 94%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
 }

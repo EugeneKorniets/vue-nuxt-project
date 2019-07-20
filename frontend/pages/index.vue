@@ -46,73 +46,73 @@
 </template>
 
 <script>
-import AppMenu from '@/components/AppMenu'
-import AppHeaderBar from '@/components/AppHeaderBar'
-import AppPopup from '@/components/AppPopup'
-import MainBanner from '@/components/MainBanner'
-import PromoBannerLine from '@/components/PromoBannerLine'
+  import AppMenu from '@/components/AppMenu'
+  import AppHeaderBar from '@/components/AppHeaderBar'
+  import AppPopup from '@/components/AppPopup'
+  import MainBanner from '@/components/MainBanner'
+  import PromoBannerLine from '@/components/PromoBannerLine'
 
-import { mapState, mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
 
-export default {
-  components: {
-    AppMenu,
-    AppHeaderBar,
-    AppPopup,
-    MainBanner,
-    PromoBannerLine
-  },
-
-  data: function () {
-    return {
-      isActivePopup: false,
-
-      cityListLoading: false
-    }
-  },
-
-  computed: {
-    ...mapState('city', {
-      CITY_LIST: 'cityList'
-    }),
-
-    ...mapState('static', {
-      HEADER_BAR_LINK_LIST: 'headerBarLinkList'
-    })
-  },
-
-  methods: {
-    ...mapActions('city', {
-      LOAD_CITY_LIST: 'loadCityList'
-    }),
-
-    togglePopup () {
-      this.isActivePopup = !this.isActivePopup
+  export default {
+    components: {
+      AppMenu,
+      AppHeaderBar,
+      AppPopup,
+      MainBanner,
+      PromoBannerLine
     },
 
-    headerBarClickLinkHandler (id) {
-      if (id === 1) {
-        this.togglePopup()
-        this.cityListLoading = true
-        this.LOAD_CITY_LIST()
-          .then(() => {
-            console.log('Список городов загружен')
-          })
-          .catch((err) => {
-            console.log('Ошибка загрузки списка городов. Ошибка: ' + err)
-          })
-          .finally(() => {
-            this.cityListLoading = false
-          })
-      }
-      if (id === 2) {
-        this.$router.push('/stores')
-      }
-    }
-  },
+    data: function () {
+      return {
+        isActivePopup: false,
 
-  async fetch ({ store }) {
-    await store.dispatch('menu/loadMenu')
+        cityListLoading: false
+      }
+    },
+
+    computed: {
+      ...mapState('city', {
+        CITY_LIST: 'cityList'
+      }),
+
+      ...mapState('static', {
+        HEADER_BAR_LINK_LIST: 'headerBarLinkList'
+      })
+    },
+
+    methods: {
+      ...mapActions('city', {
+        LOAD_CITY_LIST: 'loadCityList'
+      }),
+
+      togglePopup () {
+        this.isActivePopup = !this.isActivePopup
+      },
+
+      headerBarClickLinkHandler (id) {
+        if (id === 1) {
+          this.togglePopup()
+          this.cityListLoading = true
+          this.LOAD_CITY_LIST()
+            .then(() => {
+              console.log('Список городов загружен')
+            })
+            .catch((err) => {
+              console.log('Ошибка загрузки списка городов. Ошибка: ' + err)
+            })
+            .finally(() => {
+              this.cityListLoading = false
+            })
+        }
+        if (id === 2) {
+          this.$router.push('/stores')
+        }
+      }
+    },
+
+    async fetch ({ store }) {
+      await store.dispatch('menu/loadMenu')
+    }
   }
-}
 </script>
