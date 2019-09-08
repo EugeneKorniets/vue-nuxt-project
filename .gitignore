@@ -22,6 +22,7 @@ yarn-error.log*
 frontend/.DS_Store
 frontend/node_modules
 frontend/dist
+frontend/.nuxt
 
 # Backend directory files
 backend/.DS_Store
