@@ -40,10 +40,5 @@ module.exports = {
   },
   server: {
     port: 8000
-  },
-  cache: {
-    max: 100,
-    maxAge: 10000
   }
 }
-
