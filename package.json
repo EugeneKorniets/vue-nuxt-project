@@ -13,10 +13,10 @@
     "front-install": "npm install --prefix frontend",
     "front-dev": "npm run dev --prefix frontend",
     "front-build": "npm run build --prefix frontend",
-    "front-start": "npm run start --prefix frontend",
+    "front-start": "npm run front-build && npm run start --prefix frontend",
     "back-install": "npm install --prefix backend",
     "back-dev": "npm run server --prefix backend",
     "back-start": "npm run server --prefix backend",
-    "deploy": "npm run front install && npm run front-build && npm run back-install && npm run back-start"
+    "deploy": "npm run back-install && npm run back-start && npm run front install && npm run front-build"
   }
 }
